@@ -1,0 +1,18 @@
+;; shadow-cljs configuration
+{:source-paths
+ ["src/dev"
+  "src/main"
+  "src/test"]
+
+;;  :dependencies
+ :dependencies [[com.andrewmcveigh/cljs-time "0.5.2"][reagent "1.1.1"]]
+;;  :dependencies [[com.andrewmcveigh/cljs-time "0.5.2"]]
+
+ :dev-http {8080 "public"}
+
+ :builds
+ {:frontend
+  {:target :browser
+   :compiler-options {:infer-externs :auto}
+   :modules {:main {:init-fn bunny.frontend.app6/init}}
+   }}}
